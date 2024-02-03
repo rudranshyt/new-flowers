@@ -3,12 +3,67 @@ body {
 }
 
 .main {
-  background: linear-gradient(135deg, #ffd3a5, #ff9770);
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Arial', sans-serif;
-  color: #fff;
+    background: linear-gradient(135deg, #ffd3a5, #ff9770);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: #333; 
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000; 
+}
+
+.input {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input h4 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #fff; 
+}
+
+input {
+    padding: 15px; 
+    width: 250px; 
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #555; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ccc; 
+}
+
+.input input::placeholder {
+    color: #888; 
+}
+
+.button button {
+    padding: 15px 30px; 
+    background-color: #fff;
+    color: #ff9770;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.button button:hover {
+    background-color: #ffddb9;
 }
