@@ -10,9 +10,6 @@ This project is a simple web application designed for a Valentine's date. It inc
 
 The application provides a warm and romantic atmosphere with a background gradient resembling a bouquet of flowers. The color scheme is carefully chosen to evoke feelings of love and tenderness.
 
-### Songs
-
-You can enhance your Valentine's date experience by playing your favorite songs. The application includes a "Let's Go" button, which, when clicked, triggers a JavaScript function to capture user input. The entered name is then logged to the console, creating an interactive and personalized experience for the user.
 
 ## How to Use
 
