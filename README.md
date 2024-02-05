@@ -8,7 +8,7 @@ This project is a simple web application designed for a Valentine's date. It inc
 
 ### Flowers
 
-The application provides a warm and romantic atmosphere with a background gradient resembling a bouquet of flowers. The color scheme is carefully chosen to evoke feelings of love and tenderness.
+The application provides a warm and romantic atmosphere with a background gradient resembling a bouquet of flowers. The color scheme is carefully chosen to evoke feelings of love and tenderness. Also includes a collection of specially selected songs.
 
 
 ## How to Use
