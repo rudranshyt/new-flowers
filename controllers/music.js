@@ -10,7 +10,7 @@ const audioObjects = {};
 let currentSongId = null;
 
 function togglePlayPause(songId) {
-  // Check if there is a currently playing song and pause it
+  
   if (
     currentSongId !== null &&
     currentSongId !== songId &&
@@ -19,7 +19,7 @@ function togglePlayPause(songId) {
     audioObjects[currentSongId].pause();
   }
 
-  // Toggle play/pause for the selected song
+ 
   if (!audioObjects[songId]) {
     audioObjects[songId] = new Audio(audioSources[songId]);
   }
@@ -34,7 +34,6 @@ function togglePlayPause(songId) {
   }
 }
 
-// Add event listeners for each song element
 for (const songId in audioSources) {
   if (audioSources.hasOwnProperty(songId)) {
     document.getElementById(songId).addEventListener("click", function () {

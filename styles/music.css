@@ -64,3 +64,47 @@ body {
   color: #ff4081;
   box-shadow: 0 6px 12px rgba(255, 0, 102, 0.4);
 }
+
+@media (max-width: 600px){
+  .songItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  color: #333;
+  padding: 5%;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  width: 120%; 
+}
+.main {
+  background: linear-gradient(135deg, #1a1a1a, #ff0066);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media (max-width: 320px){
+  .songItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  color: #333;
+  padding: 5%;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  width: 100%; 
+}
+.main {
+  background: linear-gradient(135deg, #1a1a1a, #ff0066);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
