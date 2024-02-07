@@ -2,13 +2,13 @@
 
 ## Overview
 
-This project is a simple web application designed for a Valentine's date. It includes features related to flowers and songs to make your Valentine's date special.
+This project is a simple web application designed for a Valentine's date. It includes features related to hearts, flowers and songs to make your Valentine's date special.
 
 ## Features
 
 ### Flowers
 
-The application provides a warm and romantic atmosphere with a background gradient resembling a bouquet of flowers. The color scheme is carefully chosen to evoke feelings of love and tenderness. Also includes a collection of specially selected songs.
+The application provides a warm and romantic atmosphere with a background gradient resembling a sea of hearts. The color scheme is carefully chosen to evoke feelings of love and tenderness. Also includes a collection of specially selected songs.
 
 
 ## How to Use

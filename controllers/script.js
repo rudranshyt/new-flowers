@@ -1,13 +1,12 @@
-var username;
-
 function getUserInput() {
-  this.username = document.getElementById("userInputField").value;
-  console.log("this.username----->", this.username);
-  window.location.href = "templates/flowers.html";
+  var username = document.getElementById("userInputField").value;
+  console.log("username ----->", username);
+  redirectToFlowersPage(username);
 }
 
-function displayUserName() {
-  var displayElement = document.getElementById("displayUsername");
-  displayElement.textContent =
-    "Hey 👋" + this.username + ", I made this for ya🫶!";
+function redirectToFlowersPage(username) {
+  window.location.href =
+    "templates/flowers.html?username=" + encodeURIComponent(username);
 }
+
+

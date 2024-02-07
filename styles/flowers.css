@@ -1,20 +1,25 @@
 body {
     margin: 0;
     overflow: hidden;
-}
-
-.main {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, #8B0000, #FF4500, #FF6347, #FFA500);
-    
 }
-.main-container{
+
+#displayUsername {
+    color: white;
+    text-align: center;
+    text-wrap: wrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.main-container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    animation: blurFadeIn 5s ease-in-out forwards;
 }
 
 .petals {
@@ -25,6 +30,135 @@ body {
     animation: jiggle 3s infinite alternate ease-in-out;
 }
 
+
+.flower {
+    width: 200px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    position: absolute;
+    bottom: -200px; /* Position at the bottom, partially hidden */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: popUp 2s ease forwards; /* Add pop up animation */
+}
+
+.center{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+}
+
+.petal {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: palevioletred;
+    transform-origin: center 150px;
+    z-index: 2;
+    
+}
+
+.petal:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.petal:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.petal:nth-child(3) {
+    transform: rotate(135deg);
+}
+
+.petal:nth-child(4) {
+    transform: rotate(180deg);
+}
+
+.petal:nth-child(5) {
+    transform: rotate(225deg);
+}
+
+.petal:nth-child(6) {
+    transform: rotate(270deg);
+}
+
+.petal:nth-child(7) {
+    transform: rotate(315deg);
+}
+
+.petal:nth-child(8) {
+    transform: rotate(360deg);
+}
+
+.stem{
+    height: 380px;
+    width: 20px;
+    display: block;
+    background-color: green;
+    position: absolute;
+    top: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.leaf-1 {
+    width: 60px;
+    height: 120px;
+    background-color: #00ff00;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(10%) rotate(45deg);
+    clip-path: polygon(-15% 0%, 115% 0%, 47% 100%);
+    border-radius: 50% 50% 0 0;
+}
+.leaf-2{
+    width: 60px;
+    height: 120px;
+    background-color: #00ff00;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform:translateX(-127%) rotate(-45deg);
+    clip-path: polygon(-15% 0%, 115% 0%, 47% 100%);
+    border-radius: 50% 50% 0 0;
+}
+.leaf-3{
+    width: 60px;
+    height: 120px;
+    background-color: #00ff00;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-127%) rotate(-45deg);
+    clip-path: polygon(-15% 0%, 115% 0%, 47% 100%);
+    border-radius: 50% 50% 0 0;
+}
+.leaf-4{
+    width: 60px;
+    height: 120px;
+    background-color: #00ff00;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(10%) rotate(45deg);
+    clip-path: polygon(-15% 0%, 115% 0%, 47% 100%);
+    border-radius: 50% 50% 0 0;
+}
+
+
 .heart {
     position: relative;
     width: 100px;
@@ -33,16 +167,16 @@ body {
 
 .heart:before,
 .heart:after {
+    content: '';
     position: absolute;
-    content: "";
-    width: 100px;
-    height: 170px;
+    width: 6.25rem;
+    height: 10.625rem;
     background: rgb(251, 158, 189);
-    border-radius: 50px 50px 0 0;
+    border-radius: 3.125rem 3.125rem 0 0;
 }
 
 .heart:before {
-    left: 100px;
+    left: 6.25rem;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
 }
@@ -80,7 +214,19 @@ body {
     transform: rotate(-30deg);
 }
 
+@keyframes popUp {
+    0% {
+        bottom: -200px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0; 
+        opacity: 1;
+    }
+}
+
 @keyframes jiggle {
+
     0%,
     100% {
         transform: translateY(0);
@@ -88,5 +234,54 @@ body {
 
     50% {
         transform: translateY(-10px);
+    }
+}
+@keyframes blurFadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(0); 
+    }
+    100% {
+        opacity: 1;
+        filter: blur(15px); 
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .heart {
+        position: relative;
+        width: 3rem;
+        height: 2.8125rem;
+        margin: 30%;
+    }
+
+    .heart:before,
+    .heart:after {
+        position: absolute;
+        width: 3rem;
+        height: 5.3125rem;
+        background: rgb(251, 158, 189);
+        border-radius: 1.5625rem 1.5625rem 0 0;
+    }
+
+    .heart:before {
+        left: 3rem;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+
+    .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
     }
 }
