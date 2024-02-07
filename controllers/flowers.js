@@ -7,4 +7,10 @@ function displayUserName() {
     "👋 Hey " + this.username + " 💖 " + ", I made this for ya🫶!";
 }
 
+function navigateToPlaylist() {
+  document.getElementById("playlist").addEventListener("click", () => {
+    window.location.href = "../templates/music.html";
+  });
+}
+
 displayUserName();
